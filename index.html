@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An-Nuur Digital — Jadwal Sholat & Galeri Masjid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-glow glow-a"></div><div class="bg-glow glow-b"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#"><span class="brand-icon">🕌</span><span>An-Nuur <b>Digital</b></span></a>
+    <div class="search"><span>⌕</span><input id="searchInput" placeholder="Cari video, masjid, atau sejarah..."></div>
+    <button id="locationBtn" class="location-btn">📍 <span id="locationName">Palembang</span></button>
+  </header>
+
+  <main class="container">
+    <section class="prayer-panel">
+      <div class="panel-top">
+        <div>
+          <div class="eyebrow">WAKTU SHOLAT HARI INI</div>
+          <h1>Jadwal Sholat <span>Digital</span></h1>
+          <p id="dateText">Memuat tanggal...</p>
+        </div>
+        <div class="clock-wrap"><div id="digitalClock">00:00:00</div><small>WAKTU LOKAL</small></div>
+      </div>
+      <div class="prayer-grid" id="prayerGrid"></div>
+      <div class="next-prayer"><span>⏱</span><strong id="nextPrayer">Menghitung waktu sholat berikutnya...</strong><span id="countdown"></span></div>
+    </section>
+
+    <section class="hero">
+      <div class="badge">✦ GALERI MASJID & DUNIA ISLAM</div>
+      <h2>Jelajahi Keindahan <span>Masjid</span><br>dan Dunia di Baliknya.</h2>
+      <p>Temukan inspirasi melalui video perjalanan, arsitektur, sejarah, dan tempat-tempat menakjubkan dari berbagai penjuru dunia.</p>
+    </section>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button class="filter active" data-filter="all">Semua</button>
+        <button class="filter" data-filter="Masjid & Sejarah">Masjid & Sejarah</button>
+        <button class="filter" data-filter="Dunia">Dunia</button>
+        <button class="filter" data-filter="Alam">Alam</button>
+      </div>
+      <div class="result-count" id="resultCount"></div>
+    </div>
+
+    <div class="video-grid" id="videoGrid"></div>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeBtn">×</button>
+      <div class="video-frame"><iframe id="videoFrame" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="modal-info"><span id="modalCategory"></span><h3 id="modalTitle"></h3><p id="modalDesc"></p></div>
+    </div>
+  </div>
+
+  <footer>© 2026 An-Nuur Digital • Dibuat untuk GitHub Pages</footer>
+  <script src="script.js"></script>
+</body>
+</html>
